@@ -1,0 +1,17 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Problem Statement}{4}{0}{2}
+\beamer@sectionintoc {3}{Objectives}{5}{0}{3}
+\beamer@sectionintoc {4}{Literature Review}{6}{0}{4}
+\beamer@sectionintoc {5}{Identified Research Gaps \& Proposed Solutions}{22}{0}{5}
+\beamer@sectionintoc {6}{System Design Principles}{23}{0}{6}
+\beamer@sectionintoc {7}{Workflow Diagram}{27}{0}{7}
+\beamer@sectionintoc {8}{Proposed Methods}{28}{0}{8}
+\beamer@sectionintoc {9}{Model Responsibilities \& Inference Flow}{32}{0}{9}
+\beamer@sectionintoc {10}{Dataset Preparation \& Model Training}{37}{0}{10}
+\beamer@sectionintoc {11}{Architecture Diagram}{45}{0}{11}
+\beamer@sectionintoc {12}{Project Development \& Testing Flowchart}{46}{0}{12}
+\beamer@sectionintoc {13}{Database Schema}{47}{0}{13}
+\beamer@sectionintoc {14}{Algorithms and Pseudocode}{49}{0}{14}
+\beamer@sectionintoc {15}{Implementation \& Technology Stack}{53}{0}{15}
+\beamer@sectionintoc {16}{Work Plan \& Gantt Chart}{55}{0}{16}
+\beamer@sectionintoc {17}{References}{56}{0}{17}

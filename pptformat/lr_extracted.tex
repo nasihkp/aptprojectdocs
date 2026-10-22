@@ -1,0 +1,437 @@
+%% ======================================================================
+%%  SECTION 3: LITERATURE REVIEW
+%% ======================================================================
+\section{Literature Review}
+
+%% ------ P01 -----------------------------------------------------------
+\begin{frame}[t]{MGDA: Provenance Graph Threat Detection \& Attack Scenario Reconstruction}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Mengjiao Cui, Zhengwei Jiang, Shuai Li, Chunyan Ma, Kai Zhang, Peian Yang, and Huamin Feng\par\vspace{4pt}
+\textbf{Year:} 2025\par\vspace{4pt}
+\textbf{Journal:}\par
+Computer Networks (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes \textbf{MGDA}, a self-supervised masked graph autoencoder on system provenance graphs for label-free APT detection. By learning normal behavior through masked node and edge reconstruction, anomalies are flagged via reconstruction errors, followed by causal tracing to reconstruct multi-stage attack scenarios.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.0pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.5pt}
+\textbullet~Detects unknown attacks without needing attack training labels.\par\vspace{2.0pt}\textbullet~Fast training in 14 minutes (100$\times$ speedup over baselines).\par\vspace{4.0pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.5pt}
+\textbullet~Connects attack steps using manual rules rather than AI.\par\vspace{2.0pt}\textbullet~Inspects only event links, completely ignoring payload contents.\par\vspace{4pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P02 -----------------------------------------------------------
+\begin{frame}[t]{Commander: Robust Cross-Machine Multi-Phase APT Detection via Provenance}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Qi Liu, Kaibin Bao, and Veit Hagenmeyer\par\vspace{4pt}
+\textbf{Year:} 2025\par\vspace{4pt}
+\textbf{Journal:}\par
+Journal of Information Security and Applications (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes \textbf{Commander}, a cross-machine provenance analytics detector that tracks multi-phase APT lateral movement across distributed hosts. It uses logon-session partitioning to bound graph growth and prevent dependency explosion, correlating host audit logs with authentication events to trace attacker progression.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.0pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.5pt}
+\textbullet~Accurately tracks lateral attack movement across multiple hosts.\par\vspace{2.0pt}\textbullet~Session partitioning stops system graphs from growing too large.\par\vspace{4.0pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.5pt}
+\textbullet~Strictly requires Windows Active Directory authentication logs.\par\vspace{2.0pt}\textbullet~Connecting attack paths across machines takes up to 9 minutes.\par\vspace{4pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P03 -----------------------------------------------------------
+\begin{frame}[t]{Threat Detection in CPS Through Spatio-Temporal Anomaly Detection Using GAT}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Roberto Canonico, Francesco Lista, Annalisa Navarro, Giancarlo Sperl{\'\i}, and Andrea Vignali\par\vspace{4pt}
+\textbf{Year:} 2025\par\vspace{4pt}
+\textbf{Journal:}\par
+Computers \& Security (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes an unsupervised spatio-temporal framework combining \textbf{Graph Attention Networks (GAT)} for spatial dependencies and recurrent units for temporal patterns. It detects complex cyber-physical anomalies from multivariate sensor streams via joint forecasting and reconstruction errors.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.0pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.5pt}
+\textbullet~Captures both sensor wiring links and rapid timing changes.\par\vspace{2.0pt}\textbullet~Fast 1.4-second detection enables quick real-time response.\par\vspace{4.0pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.5pt}
+\textbullet~Assumes sensor topology stays fixed during operation.\par\vspace{2.0pt}\textbullet~Higher compute overhead compared to traditional baseline models.\par\vspace{4pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P04 -----------------------------------------------------------
+\begin{frame}[t]{EdgeFence: Federated Temporal GNNs for Adversarial Malware Detection in Edge Networks}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Osei Isaac, Benjamin Appiah, Daniel Commey, Kwabena Owusu-Agyemang, Michael Asante, and Benjamin Hayfrom Acquah\par\vspace{4pt}
+\textbf{Year:} 2026\par\vspace{4pt}
+\textbf{Journal:}\par
+International Journal of Information Security (Springer)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes \textbf{EdgeFence}, a federated learning framework for lightweight malware detection across distributed edge networks. Edge nodes model system call sequences as dynamic interaction graphs and locally train Temporal GNNs, sharing only model weights via FedAvg to preserve data privacy against adversarial threats.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.0pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.5pt}
+\textbullet~Keeps raw traffic on local devices to protect user privacy.\par\vspace{2.0pt}\textbullet~Temporal graph layers effectively catch evasive malware tricks.\par\vspace{4.0pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.5pt}
+\textbullet~Differential privacy noise slightly lowers overall accuracy.\par\vspace{2.0pt}\textbullet~Constrained by mobile device battery and processing limits.\par\vspace{4pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P05 -----------------------------------------------------------
+\begin{frame}[t]{SHIELD: APT Detection and Intelligent Explanation Using Large Language Models}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Parth Atulbhai Gandhi, Prasanna N. Wudali, Yonatan Amaru, Akansha Shukla, Yuval Elovici, and Asaf Shabtai\par\vspace{4pt}
+\textbf{Year:} 2026\par\vspace{4pt}
+\textbf{Journal:}\par
+Engineering Applications of Artificial Intelligence (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes \textbf{SHIELD}, an end-to-end framework combining provenance graph anomaly detection with Large Language Models (LLMs). It isolates suspicious subgraphs from OS audit logs, prompting a fine-tuned LLM to verify attacks, generate plain-English explanations, and map activities to MITRE ATT\&CK techniques.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.1pt}{8.8pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.3pt}
+\textbullet~Reduces false alarms and analyst workload.\par\vspace{1.8pt}\textbullet~Tracks slow-evolving attacks over long periods.\par\vspace{1.8pt}\textbullet~Provides clear and human-interpretable attack summaries.\par\vspace{3.2pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.3pt}
+\textbullet~Requires high computational resources.\par\vspace{1.8pt}\textbullet~Can cause detection delay.\par\vspace{1.8pt}\textbullet~Depends on complete and accurate log capture.\par\vspace{3pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P06 -----------------------------------------------------------
+\begin{frame}[t]{From Logs to Tactics: Unsupervised APT Reconstruction with MITRE Meta-Alerts}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Francesco Ferazza, Cosimo Melella, Konstantinos Mersinas, Ricardo Lugo, and Rain Ottis\par\vspace{4pt}
+\textbf{Year:} 2026\par\vspace{4pt}
+\textbf{Journal:}\par
+International Journal of Information Security (Springer)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes an unsupervised framework that reconstructs full-scale APT campaigns from noisy audit logs. It uses Graph Autoencoders and Sentence-BERT to generate alert embeddings, clustering them into multi-stage attack sequences and achieving an 87\% F1-score in automated MITRE ATT\&CK mapping.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{6.8pt}{8.4pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.3pt}
+\textbullet~Reduces alert overload by grouping many alerts into meaningful meta-alerts.\par\vspace{1.8pt}\textbullet~Works without labelled data using an unsupervised approach.\par\vspace{1.8pt}\textbullet~Handles noisy and heterogeneous logs from different sources.\par\vspace{3.2pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.3pt}
+\textbullet~Depends on LLM summary quality, so incorrect summaries can affect later stages.\par\vspace{1.8pt}\textbullet~Ontology-based mapping can miss paraphrased expressions.\par\vspace{1.8pt}\textbullet~Evaluation was mainly based on exercise data, so broader real-world testing is needed.\par\vspace{3pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P07 -----------------------------------------------------------
+\begin{frame}[t]{A Novel Hybrid Intrusion Detection Method Integrating Anomaly and Misuse Detection}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Gisung Kim, Seungmin Lee, and Sehun Kim\par\vspace{4pt}
+\textbf{Year:} 2014\par\vspace{4pt}
+\textbf{Journal:}\par
+Expert Systems with Applications (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes a hierarchical dual-tier intrusion detection architecture integrating misuse and anomaly detection. A frontline Decision Tree rapidly filters known network attack signatures, while decomposed One-Class SVMs profile normal behavior to detect novel zero-day attacks with reduced overhead.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{6.8pt}{8.4pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.3pt}
+\textbullet~Improves detection performance for both known and unknown attacks.\par\vspace{1.8pt}\textbullet~Reduces the training time of the anomaly detection model.\par\vspace{1.8pt}\textbullet~Uses known attack information to build more accurate normal-behavior profiles.\par\vspace{3.2pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.3pt}
+\textbullet~C4.5 may split well-formed normal clusters.\par\vspace{1.8pt}\textbullet~Uneven data distribution reduces the expected reduction in training and testing time.\par\vspace{1.8pt}\textbullet~About 87\% of training data was concentrated in one subset, limiting the time-saving benefit.\par\vspace{3pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P08 -----------------------------------------------------------
+\begin{frame}[t]{Self-Supervised Graph Neural Networks for Network Intrusion Detection in Cloud-Edge}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Haiyang Diao, Xiang Li, Wan Zhang, Yan Sibyl Yu, Ye Wang, and Jing Zhang\par\vspace{4pt}
+\textbf{Year:} 2026\par\vspace{4pt}
+\textbf{Journal:}\par
+Journal of Cloud Computing (Springer)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes a self-supervised contrastive Graph Neural Network framework for network intrusion detection in cloud-edge environments. Modeling traffic flows as IP-port communication graphs, it learns robust topological representations from unlabeled traffic via multi-head attention without requiring labeled attack data.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{6.6pt}{8.1pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.3pt}
+\textbullet~Reduces the dependency on labeled data by using self-supervised contrastive learning.\par\vspace{1.8pt}\textbullet~Captures both node and edge information using multi-head attention, which helps represent different malicious traffic patterns.\par\vspace{1.8pt}\textbullet~Reduces computational cost through dynamic attention-based edge pruning, which is useful for resource-constrained edge devices.\par\vspace{3.2pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.3pt}
+\textbullet~High training computational overhead because Wasserstein and Gromov-Wasserstein distances are computationally expensive.\par\vspace{1.8pt}\textbullet~Sensitive to extreme class imbalance, causing poor detection of minority attack classes such as Theft and Backdoor.\par\vspace{1.8pt}\textbullet~Performance varies across datasets, with lower performance on complex datasets.\par\vspace{3pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P09 -----------------------------------------------------------
+\begin{frame}[t]{GraphShield: Advanced Dynamic Graph-Based Malware Detection Using GNNs}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Eslam Amer, Shaker El-Sappagh, Tamer Abuhamad, Bander Ali Saleh Al-Rimy, and Alaa Mohasseb\par\vspace{4pt}
+\textbf{Year:} 2025\par\vspace{4pt}
+\textbf{Journal:}\par
+Expert Systems with Applications (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes \textbf{GraphShield}, an explainable malware detection platform that converts dynamic program execution traces into behavioral interaction graphs. An attention-based GNN captures execution dependencies, while GNNExplainer highlights the exact malicious subgraphs to provide actionable explanations for analysts.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.0pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.5pt}
+\textbullet~Detects polymorphic malware by tracking behavioral graphs.\par\vspace{2.0pt}\textbullet~Outperforms static signature scanners on metamorphic variants.\par\vspace{4.0pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.5pt}
+\textbullet~Requires sandbox execution to capture live malware behaviors.\par\vspace{2.0pt}\textbullet~Malware that delays actions or sleeps can evade detection.\par\vspace{4pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P10 -----------------------------------------------------------
+\begin{frame}[t]{Cyber Security Attack Recognition on Cloud Networks Based on GCN and GraphSAGE}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Fargana Abdullayeva and Suleyman Suleymanzade\par\vspace{4pt}
+\textbf{Year:} 2024\par\vspace{4pt}
+\textbf{Journal:}\par
+Results in Control and Optimization (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes modeling cloud network flows as communication graphs to classify multi-class attacks using GCN and GraphSAGE models. The inductive neighborhood sampling of GraphSAGE allows the model to generalize effectively to newly deployed virtual machines without full-graph retraining.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.0pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.5pt}
+\textbullet~Effectively captures communication topology between cloud instances.\par\vspace{2.0pt}\textbullet~GraphSAGE scales well to large, dynamic cloud networks.\par\vspace{4.0pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.5pt}
+\textbullet~Tested on static offline logs rather than live cloud traffic.\par\vspace{2.0pt}\textbullet~Ignores internal host processes running inside virtual machines.\par\vspace{4pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P11 -----------------------------------------------------------
+\begin{frame}[t]{FTG-Net-E: Hierarchical Ensemble Graph Neural Network for DDoS Attack Detection}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Rana Abu Bakar, Lorenzo De Marinis, Filippo Cugini, and Francesco Paolucci\par\vspace{4pt}
+\textbf{Year:} 2024\par\vspace{4pt}
+\textbf{Journal:}\par
+Computer Networks (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes \textbf{FTG-Net-E}, a hierarchical ensemble Graph Neural Network for detecting high-volume DDoS floods and volumetric network attacks. By converting traffic into Flow Traffic Graphs (FTG), a two-level ensemble processes local and global traffic topology, achieving 99.2\% detection precision.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.0pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.5pt}
+\textbullet~Two-tier design filters massive floods with sub-millisecond delay.\par\vspace{2.0pt}\textbullet~Hierarchical ensemble minimizes false alarms during burst traffic.\par\vspace{4.0pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.5pt}
+\textbullet~Specializes in high-rate DDoS and misses low-and-slow APTs.\par\vspace{2.0pt}\textbullet~Requires hardware acceleration (GPU/FPGA) to maintain wire speed.\par\vspace{4pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P12 -----------------------------------------------------------
+\begin{frame}[t]{Intelligent Intrusion Detection for Cyber-Physical Systems Using GAN-LSTM}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Md Shakil Siddique, Md. Ashikur Rahman Khan, Ishtiaq Ahammad, Nishu Nath, Joysri Rani Das, and Fardowsi Rahman\par\vspace{4pt}
+\textbf{Year:} 2025\par\vspace{4pt}
+\textbf{Journal:}\par
+Franklin Open (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes an intrusion detection framework for cyber-physical systems combining Generative Adversarial Networks (GAN) and LSTM networks. The GAN synthesizes realistic minority-class attack samples to overcome severe data imbalance, while the LSTM captures sequential temporal patterns in industrial telemetry logs.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.0pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.5pt}
+\textbullet~Solves the rare-attack data shortage using synthetic samples.\par\vspace{2.0pt}\textbullet~Successfully improves detection recall for rare intrusions by 28\%.\par\vspace{4.0pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.5pt}
+\textbullet~GAN training can become unstable or generate unrealistic sensor values.\par\vspace{2.0pt}\textbullet~Analyzes sensor streams as parallel lines without graph topology.\par\vspace{4pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P13 -----------------------------------------------------------
+\begin{frame}[t]{Knowledge Graph Visualization and Anomaly Detection Using Graph Neural Networks}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Ali Yilmaz, Resul Das, Mehmet Ozdem, and Berk Canberk\par\vspace{4pt}
+\textbf{Year:} 2026\par\vspace{4pt}
+\textbf{Journal:}\par
+Computer Networks (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.1pt}{9.1pt}\raggedright\selectfont
+Represents network communication as a graph, where IP addresses are nodes and communication flows are edges. Applies GCN, GAT, GIN, and GraphSAGE to detect network anomalies and identify suspicious communication patterns. Provides dynamic attack-topology visualization, helping security analysts understand relationships between network entities and possible attack paths.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{6.8pt}{8.4pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.3pt}
+\textbullet~Represents communication between IPs as a graph, making attack connections easier to identify.\par\vspace{1.8pt}\textbullet~GNN models such as GIN and GraphSAGE achieved strong F1 and ROC-AUC results.\par\vspace{1.8pt}\textbullet~Provides attack-topology visualization to help analysts understand attacker--target relationships.\par\vspace{3.2pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.3pt}
+\textbullet~Mainly focuses on network-level graph analysis, not live OS-level provenance.\par\vspace{1.8pt}\textbullet~Does not fully address temporal/dynamic graph behaviour.\par\vspace{1.8pt}\textbullet~Streaming graph updates and low-latency deployment need further development.\par\vspace{3pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P14 -----------------------------------------------------------
+\begin{frame}[t]{Robust, Efficient Detection of Network Intrusion Attacks: A Large Language Model Approach}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Giancarlo Iannizzotto, Andrea Nucita, and Andrea Siragusa\par\vspace{4pt}
+\textbf{Year:} 2026\par\vspace{4pt}
+\textbf{Journal:}\par
+Computer Networks (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes applying transformer language models to network intrusion detection by tokenizing packet byte streams and sequential flow features into discrete vocabularies. Multi-head self-attention learns contextual syntax across packet sequences, providing strong robustness against noise and obfuscation.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{6.7pt}{8.2pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.3pt}
+\textbullet~Uses Transformer self-attention to capture sequential dependencies in network traffic.\par\vspace{1.8pt}\textbullet~Shows strong generalization to unseen network topologies and traffic distributions.\par\vspace{1.8pt}\textbullet~Demonstrates robustness to noisy/corrupted network traffic.\par\vspace{3.2pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.3pt}
+\textbullet~Large Transformer models can have high memory and computational requirements.\par\vspace{1.8pt}\textbullet~Represents traffic as linear 1D token sequences, so it does not naturally capture multi-hop graph relationships.\par\vspace{1.8pt}\textbullet~Provides limited insight into host-level process execution and disk activity.\par\vspace{3pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P15 -----------------------------------------------------------
+\begin{frame}[t]{Detection of Advanced Persistent Threat: A Genetic Programming Approach}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Abdullah Al Mamun, Harith Al-Sahaf, Ian Welch, and Masood Mansoori\par\vspace{4pt}
+\textbf{Year:} 2024\par\vspace{4pt}
+\textbf{Journal:}\par
+Applied Soft Computing (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes a multi-tree Genetic Programming (GP) evolutionary approach for detecting APTs in high-dimensional audit logs. By evolving tree-based symbolic feature extractors, it automatically constructs discriminative non-linear features, overcoming severe class imbalance without manual feature engineering.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{6.7pt}{8.2pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.3pt}
+\textbullet~Automatically discovers non-linear features without manual feature engineering.\par\vspace{1.8pt}\textbullet~Useful for identifying changing and previously unseen APT patterns.\par\vspace{1.8pt}\textbullet~Evolutionary search can discover different solutions rather than relying only on fixed signatures.\par\vspace{3.2pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.3pt}
+\textbullet~GP involves an evolutionary search over many candidate solutions, making it computationally demanding.\par\vspace{1.8pt}\textbullet~Detecting complex, multi-stage APT behaviour remains challenging.\par\vspace{1.8pt}\textbullet~Traditional/ML approaches can struggle when attacker behaviour changes significantly.\par\vspace{3pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
+%% ------ P16 -----------------------------------------------------------
+\begin{frame}[t]{Dynamic Cyber Deception Using AI-Driven Adaptive Honeypot Networks}
+\vspace{-0.30em}
+{\footnotesize\setlength{\tabcolsep}{3.5pt}\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{|L{3.10cm}|Y|L{5.70cm}|}
+\hline\lrhdr\hline
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+\textbf{Author:}\par
+Mohammed Alshehri\par\vspace{4pt}
+\textbf{Year:} 2026\par\vspace{4pt}
+\textbf{Journal:}\par
+Ain Shams Engineering Journal (Elsevier)\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.2pt}{9.2pt}\raggedright\selectfont
+Proposes an AI-driven dynamic cyber deception platform that deploys adaptive honeypot networks against multi-stage APT campaigns. Using reinforcement learning, it continuously reconfigures decoy services and synthetic vulnerabilities based on attacker probing, diverting adversaries and capturing high-fidelity telemetry.\par\vspace{4pt}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}\fontsize{7.1pt}{8.8pt}\raggedright\selectfont
+\textcolor{strengthGreen}{\textbf{Advantages:}}\par\vspace{1.3pt}
+\textbullet~Dynamically changes honeypot behaviour according to attacker activity.\par\vspace{1.8pt}\textbullet~Makes deception more difficult for attackers to identify.\par\vspace{1.8pt}\textbullet~Records attacker activities and helps identify their tactics and techniques.\par\vspace{3.2pt}
+\textcolor{limitRed}{\textbf{Disadvantages:}}\par\vspace{1.3pt}
+\textbullet~Effectiveness depends on attackers interacting with the honeypot environment.\par\vspace{1.8pt}\textbullet~Continuous changes may cause over-reactive or unrealistic behaviour.\par\vspace{3pt}
+\end{minipage} \\\hline
+\end{tabularx}}
+\end{frame}
+
